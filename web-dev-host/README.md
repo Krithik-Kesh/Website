@@ -1,12 +1,78 @@
-# React + Vite
+# Modern Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive portfolio website built with React, Vite, and Tailwind CSS. Features smooth scrolling navigation, dark/light mode, animated sections, and a beautiful modern design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✨ Modern, responsive design
+- 🌓 Dark/Light mode toggle
+- 📱 Fully mobile-friendly
+- 🎨 Smooth animations and transitions
+- 🚀 Optimized performance
+- 📧 Contact form ready for EmailJS integration
+- 🎯 Smooth scroll navigation
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start development server:
+```bash
+npm run dev
+```
+
+3. Build for production:
+```bash
+npm run build
+```
+
+4. Preview production build:
+```bash
+npm run preview
+```
+
+## Deployment
+
+This website is ready to deploy! See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions on:
+
+- Deploying to Vercel (Recommended)
+- Deploying to Netlify
+- Connecting a custom domain
+- DNS configuration
+
+### Quick Deploy to Vercel
+
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com)
+3. Import your repository
+4. Done! Your site is live
+
+## Customization
+
+1. **Personal Information**: Update `Hero.jsx`, `About.jsx`, and `Contact.jsx` with your details
+2. **Projects**: Edit the projects array in `Projects.jsx`
+3. **Skills**: Modify skills data in `Skills.jsx`
+4. **Social Links**: Update links in `Hero.jsx`, `Navbar.jsx`, and `Footer.jsx`
+5. **Colors**: Customize colors in `tailwind.config.js`
+
+## Tech Stack
+
+- React 19
+- Vite
+- Tailwind CSS
+- Lucide React (Icons)
+- EmailJS (for contact form)
+
+## License
+
+MIT
