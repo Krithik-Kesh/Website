@@ -14,25 +14,30 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-slide-up">
-            <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900/20 dark:to-purple-900/20 rounded-2xl flex items-center justify-center">
-              <div className="w-64 h-64 bg-gradient-to-br from-primary-500 to-purple-500 rounded-full flex items-center justify-center text-white text-6xl font-bold">
-                YN
-              </div>
+            <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900/20 dark:to-purple-900/20 rounded-2xl flex items-center justify-center overflow-hidden relative group">
+              {/* Your Photo - Place your image in the public folder and update the path below */}
+              <img
+                src="/profile-photo.jpg"
+                alt="Your Name"
+                className="w-full h-full object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
+              />
+              {/* Optional: Decorative gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
             </div>
           </div>
 
           <div className="space-y-6 animate-slide-up">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm a passionate Full Stack Developer with a love for creating
-              beautiful, functional, and user-friendly web applications. With
-              expertise in modern web technologies, I bring ideas to life through
-              clean code and thoughtful design.
+            I am a Computational Cognitive Science and Statistics 
+            student at the University of Toronto, deeply interested in the 
+            intersection of Machine Learning and Game Engineering. 
+            I spend my time exploring how deep learning can enhance 
+            real-time interactive systems, from emotional AI to optimized physics engines.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              My journey in web development started with curiosity and has evolved
-              into a career where I continuously learn and adapt to new
-              technologies. I believe in writing code that not only works but is
-              maintainable, scalable, and elegant.
+            With a background in C++ and Python, I build tools that bridge the gap between 
+            complex research and artist-friendly production environments. I believe in writing 
+            code that is not only high-performance but also maintainable and scalable.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">

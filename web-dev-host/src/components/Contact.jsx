@@ -1,7 +1,17 @@
 import { useState } from 'react'
 import { Send, Mail, Phone, MapPin } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  // EmailJS Configuration
+  // TODO: Replace these with your EmailJS credentials
+  // Get them from: https://dashboard.emailjs.com/
+  const EMAILJS_SERVICE_ID = 'service_amalwdm'
+  const EMAILJS_TEMPLATE_ID = 'template_km1gj68'
+  const EMAILJS_PUBLIC_KEY = 'JGFPhnSRYhwHZbK2S'
+  const EMAIL = 'krithikkeshant7489@gmail.com'
+  const PHONE = '+1 (778) 929-8772'
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,9 +33,25 @@ const Contact = () => {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    // Simulate form submission
-    // Replace this with actual EmailJS integration
-    setTimeout(() => {
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: YOUR_EMAIL,
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      )
+
+      // Success
       setIsSubmitting(false)
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
@@ -33,7 +59,22 @@ const Contact = () => {
       setTimeout(() => {
         setSubmitStatus(null)
       }, 5000)
-    }, 1500)
+    } catch (error) {
+      // Error handling
+      console.error('EmailJS Error:', error)
+      console.error('Error Details:', {
+        text: error.text,
+        status: error.status,
+        service: EMAILJS_SERVICE_ID,
+        template: EMAILJS_TEMPLATE_ID,
+      })
+      setIsSubmitting(false)
+      setSubmitStatus('error')
+      
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
+    }
   }
 
   return (
@@ -47,9 +88,6 @@ const Contact = () => {
             Get In <span className="text-gradient">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out!
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -76,10 +114,10 @@ const Contact = () => {
                     Email
                   </h4>
                   <a
-                    href="mailto:your.email@example.com"
+                    href={`mailto:${YOUR_EMAIL}`}
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   >
-                    your.email@example.com
+                    {YOUR_EMAIL}
                   </a>
                 </div>
               </div>
@@ -93,10 +131,10 @@ const Contact = () => {
                     Phone
                   </h4>
                   <a
-                    href="tel:+1234567890"
+                    href={`tel:${PHONE.replace(/\s/g, '')}`}
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   >
-                    +1 (234) 567-890
+                    {PHONE}
                   </a>
                 </div>
               </div>
@@ -199,6 +237,12 @@ const Contact = () => {
               {submitStatus === 'success' && (
                 <div className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-700 rounded-lg text-green-700 dark:text-green-300">
                   Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300">
+                  Failed to send message. Please check the browser console (F12) for details, or contact me directly at {YOUR_EMAIL}
                 </div>
               )}
 

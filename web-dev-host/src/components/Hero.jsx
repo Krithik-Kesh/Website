@@ -29,7 +29,7 @@ const Hero = () => {
     >
       {/* Animated Background */}
       <div
-        className="absolute inset-0 opacity-30 dark:opacity-20"
+        className="absolute inset-0 opacity-30 dark:opacity-20 pointer-events-none"
         style={{
           background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(59, 130, 246, 0.3), transparent 50%)`,
         }}
@@ -45,12 +45,11 @@ const Hero = () => {
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
             <span className="block">Hi, I'm</span>
-            <span className="block text-gradient mt-2">Your Name</span>
+            <span className="block text-gradient mt-2">Krithik!</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
-            A passionate <span className="font-semibold text-primary-600 dark:text-primary-400">Full Stack Developer</span> creating
-            beautiful and functional web experiences
+          Based in Toronto, I am a UofT student diving into the intersection of <span className="font-semibold text-primary-600 dark:text-primary-400">Machine Learning and Game Engineering.</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up">
@@ -69,28 +68,28 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-6 animate-slide-up">
+          <div className="flex justify-center space-x-6 animate-slide-up relative z-10">
             <a
-              href="https://github.com"
+              href="https://github.com/Krithik-Kesh"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all transform hover:scale-110"
+              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all transform hover:scale-110 cursor-pointer"
               aria-label="GitHub"
             >
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/krithiktamilselvan/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all transform hover:scale-110"
+              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all transform hover:scale-110 cursor-pointer"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:your.email@example.com"
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all transform hover:scale-110"
+              href="mailto:krithikkeshant7489@gmail.com"
+              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all transform hover:scale-110 cursor-pointer"
               aria-label="Email"
             >
               <Mail className="w-6 h-6" />
