@@ -3,58 +3,36 @@ import { ExternalLink, Github } from 'lucide-react'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Portfolio Website',
       description:
-        'A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'Personal Portfolio Website (This one!)',
+      tech: ['React', 'Tailwind CSS', 'Vite', 'EmailJS'],
+      image: '/portfolio-project.jpeg',
+      github: 'https://github.com/krithikkeshant/portfolio',
     },
     {
-      title: 'Task Management App',
+      title: 'Travel Path App',
       description:
-        'A collaborative task management application with real-time updates and team collaboration features.',
-      tech: ['React', 'Socket.io', 'Express', 'PostgreSQL'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'An automated trip-tracking app that visualizes your travel routes and weather forecast.',
+      tech: ['Java', 'Swing', 'Google Maps API', 'OpenWeather API'],
+      image: '/travel-path-project.webp',
+      github: 'https://github.com/Krithik-Kesh/Travel-Path',
     },
     {
-      title: 'Weather Dashboard',
+      title: 'Frequent Flyers System',
       description:
-        'A beautiful weather dashboard with location-based forecasts and interactive data visualization.',
-      tech: ['React', 'Chart.js', 'OpenWeather API'],
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'A simulated data analytics tool for a fictional budget airline.',
+      tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'],
+      image: '/frequent-flyers-project.webp',
+      github: 'https://github.com/Krithik-Kesh/Frequent-Flyers-System',
     },
     {
-      title: 'Social Media Analytics',
+      title: 'IN MOTION (WIP)',
       description:
-        'Analytics dashboard for social media metrics with real-time data and comprehensive reporting.',
-      tech: ['Next.js', 'TypeScript', 'D3.js', 'GraphQL'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      github: 'https://github.com',
-      live: 'https://example.com',
-    },
-    {
-      title: 'Learning Platform',
-      description:
-        'An online learning platform with video courses, quizzes, and progress tracking.',
-      tech: ['React', 'Node.js', 'AWS S3', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop',
-      github: 'https://github.com',
-      live: 'https://example.com',
-    },
-    {
-      title: 'Recipe Finder App',
-      description:
-        'Discover and save recipes with advanced filtering, meal planning, and shopping list features.',
-      tech: ['React', 'Redux', 'Spoonacular API'],
-      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop',
-      github: 'https://github.com',
-      live: 'https://example.com',
+        'Java videogame',
+      tech: ['Java', 'JFrame', 'JavaFX', 'Java 2D'],
+      image: '/IN-MOTION.png',
+      github: 'https://github.com/Krithik-Kesh/In-Motion',
     },
   ]
 
@@ -116,15 +94,6 @@ const Projects = () => {
                     <Github className="w-5 h-5" />
                     <span className="text-sm font-medium">Code</span>
                   </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                    <span className="text-sm font-medium">Live Demo</span>
-                  </a>
                 </div>
               </div>
             </div>
@@ -136,4 +105,5 @@ const Projects = () => {
 }
 
 export default Projects
+
 
