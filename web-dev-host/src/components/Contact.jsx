@@ -4,8 +4,6 @@ import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   // EmailJS Configuration
-  // TODO: Replace these with your EmailJS credentials
-  // Get them from: https://dashboard.emailjs.com/
   const EMAILJS_SERVICE_ID = 'service_amalwdm'
   const EMAILJS_TEMPLATE_ID = 'template_km1gj68'
   const EMAILJS_PUBLIC_KEY = 'JGFPhnSRYhwHZbK2S'
@@ -40,7 +38,7 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: YOUR_EMAIL,
+        to_email: EMAIL,
       }
 
       // Send email using EmailJS
@@ -114,10 +112,10 @@ const Contact = () => {
                     Email
                   </h4>
                   <a
-                    href={`mailto:${YOUR_EMAIL}`}
+                    href={`mailto:${EMAIL}`}
                     className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                   >
-                    {YOUR_EMAIL}
+                    {EMAIL}
                   </a>
                 </div>
               </div>
@@ -192,7 +190,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
-                  placeholder="your.email@example.com"
+                  placeholder="youremail@example.com"
                 />
               </div>
 
@@ -242,7 +240,7 @@ const Contact = () => {
 
               {submitStatus === 'error' && (
                 <div className="p-4 bg-red-100 dark:bg-red-900/30 border border-red-400 dark:border-red-700 rounded-lg text-red-700 dark:text-red-300">
-                  Failed to send message. Please check the browser console (F12) for details, or contact me directly at {YOUR_EMAIL}
+                  Failed to send message. Please check the browser console (F12) for details, or contact me directly at {EMAIL}
                 </div>
               )}
 

@@ -15,13 +15,15 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-slide-up">
             <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900/20 dark:to-purple-900/20 rounded-2xl flex items-center justify-center overflow-hidden relative group">
-              {/* Your Photo - Place your image in the public folder and update the path below */}
               <img
-                src="/profile-photo.jpg"
-                alt="Your Name"
+                src="/profile-photo.jpeg"
+                alt="Krithik"
                 className="w-full h-full object-cover rounded-2xl transition-transform duration-300 group-hover:scale-105"
+                onError={(e) => {
+                  console.error('Image failed to load:', e.target.src)
+                  e.target.style.display = 'none'
+                }}
               />
-              {/* Optional: Decorative gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
             </div>
           </div>
