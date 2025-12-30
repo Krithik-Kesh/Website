@@ -86,3 +86,4 @@ image: 'https://cdn.example.com/my-image.jpg'
 - Just change the `image` property in the projects array
 - Use any filename you want, just update both the file and the code
 
+
