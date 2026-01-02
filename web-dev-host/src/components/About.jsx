@@ -46,13 +46,7 @@ const About = () => {
                 <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-1">
                   Experience
                 </h4>
-                <p className="text-gray-600 dark:text-gray-300">3+ Years</p>
-              </div>
-              <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-1">
-                  Projects
-                </h4>
-                <p className="text-gray-600 dark:text-gray-300">50+ Completed</p>
+                <p className="text-gray-600 dark:text-gray-300">2 Years</p>
               </div>
               <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-1">
