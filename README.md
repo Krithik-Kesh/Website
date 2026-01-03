@@ -14,3 +14,7 @@ A clean, responsive portfolio built with React and Tailwind CSS. It features a d
 - Tailwind CSS
 - Vite
 - EmailJS
+- Vercel
+
+##URL
+www.krithik-kesh.ca
