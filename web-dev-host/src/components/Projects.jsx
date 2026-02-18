@@ -34,6 +34,14 @@ const Projects = () => {
       image: '/IN-MOTION.png',
       github: 'https://github.com/Krithik-Kesh/In-Motion',
     },
+    {
+      title: 'App Aggregator',
+      description:
+        'A automated app that inputs a CSV and uses Android Studio to aggregator therapy app responses.',
+      tech: ['Kotlin', 'Android Studio', 'Gradle', 'Appium'],
+      image: '/app.jpg?v=1', // ?v=1 bypasses cache if image wasn't loading
+      github: 'https://github.com/Krithik-Kesh/AppAggregator',
+    }
   ]
 
   return (
@@ -59,11 +67,12 @@ const Projects = () => {
               className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden bg-gray-200 dark:bg-gray-700">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
