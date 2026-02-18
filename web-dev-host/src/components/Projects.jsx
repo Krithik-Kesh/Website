@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: 'IN MOTION (WIP)',
       description:
-        'Java videogame',
+        'Top-Down Shooter Java VideoGame with its own game engine.',
       tech: ['Java', 'JFrame', 'JavaFX', 'Java 2D'],
       image: '/IN-MOTION.png',
       github: 'https://github.com/Krithik-Kesh/In-Motion',
