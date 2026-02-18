@@ -6,9 +6,9 @@ const Projects = () => {
       title: 'Portfolio Website',
       description:
         'Personal Portfolio Website (This one!)',
-      tech: ['React', 'Tailwind CSS', 'Vite', 'EmailJS'],
+      tech: ['JavaScript', 'React', 'Tailwind CSS', 'Vite', 'EmailJS'],
       image: '/portfolio-project.jpeg',
-      github: 'https://github.com/krithikkeshant/portfolio',
+      github: 'https://github.com/Krithik-Kesh/Website',
     },
     {
       title: 'Travel Path App',
@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: 'IN MOTION (WIP)',
       description:
-        'Java videogame',
+        'Top-Down Shooter Java VideoGame with its own game engine.',
       tech: ['Java', 'JFrame', 'JavaFX', 'Java 2D'],
       image: '/IN-MOTION.png',
       github: 'https://github.com/Krithik-Kesh/In-Motion',
